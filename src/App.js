@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/users')
+      .get('https://node-blog-be.herokuapp.com/api/users')
       .then(res => {
         dispatch({
           type: FETCH_USERS,

@@ -9,7 +9,11 @@ const UserCard = props => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/users/${props.match.params.id}/post`)
+      .get(
+        `https://node-blog-be.herokuapp.com/api/users/${
+          props.match.params.id
+        }/post`
+      )
       .then(res => {
         dispatch({
           type: FETCH_POSTS,
